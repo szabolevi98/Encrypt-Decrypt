@@ -25,9 +25,9 @@ namespace Encrypt_Decrypt
 
         private void button_Click(object sender, EventArgs e)
         {
+            Output_textBox.Text = string.Empty;
             if (Input_textBox.Text != string.Empty)
             {
-                Output_textBox.Text = string.Empty;
                 List<char> charList = Input_textBox.Text.ToCharArray().ToList();
                 charList.ForEach(c => { Output_textBox.Text += EncryptDecrypt(c, (int)numericUpDown.Value, comboBox.SelectedIndex); });
             }
