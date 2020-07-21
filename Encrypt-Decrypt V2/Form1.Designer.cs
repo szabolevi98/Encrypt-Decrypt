@@ -35,8 +35,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox = new System.Windows.Forms.ComboBox();
             this.button = new System.Windows.Forms.Button();
-            this.numericUpDown = new System.Windows.Forms.NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown)).BeginInit();
+            this.buttonCreate = new System.Windows.Forms.Button();
+            this.buttonRead = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Input_textBox
@@ -87,32 +87,41 @@
             // 
             // button
             // 
-            this.button.Location = new System.Drawing.Point(193, 12);
+            this.button.Location = new System.Drawing.Point(139, 12);
             this.button.Name = "button";
             this.button.Size = new System.Drawing.Size(75, 23);
             this.button.TabIndex = 5;
             this.button.Text = "Go";
             this.button.UseVisualStyleBackColor = true;
-            this.button.Click += new System.EventHandler(this.button_Click);
+            this.button.Click += new System.EventHandler(this.Button_Click);
             // 
-            // numericUpDown
+            // buttonCreate
             // 
-            this.numericUpDown.Location = new System.Drawing.Point(139, 14);
-            this.numericUpDown.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.numericUpDown.Name = "numericUpDown";
-            this.numericUpDown.Size = new System.Drawing.Size(48, 20);
-            this.numericUpDown.TabIndex = 6;
+            this.buttonCreate.Location = new System.Drawing.Point(420, 12);
+            this.buttonCreate.Name = "buttonCreate";
+            this.buttonCreate.Size = new System.Drawing.Size(97, 23);
+            this.buttonCreate.TabIndex = 6;
+            this.buttonCreate.Text = "Create Dictionary";
+            this.buttonCreate.UseVisualStyleBackColor = true;
+            this.buttonCreate.Click += new System.EventHandler(this.ButtonCreate_Click);
+            // 
+            // buttonRead
+            // 
+            this.buttonRead.Location = new System.Drawing.Point(523, 12);
+            this.buttonRead.Name = "buttonRead";
+            this.buttonRead.Size = new System.Drawing.Size(93, 23);
+            this.buttonRead.TabIndex = 7;
+            this.buttonRead.Text = "Read Dictionary";
+            this.buttonRead.UseVisualStyleBackColor = true;
+            this.buttonRead.Click += new System.EventHandler(this.ButtonRead_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(628, 277);
-            this.Controls.Add(this.numericUpDown);
+            this.Controls.Add(this.buttonRead);
+            this.Controls.Add(this.buttonCreate);
             this.Controls.Add(this.button);
             this.Controls.Add(this.comboBox);
             this.Controls.Add(this.label2);
@@ -127,7 +136,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Encrypt - Decrypt V2";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,7 +149,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox;
         private System.Windows.Forms.Button button;
-        private System.Windows.Forms.NumericUpDown numericUpDown;
+        private System.Windows.Forms.Button buttonCreate;
+        private System.Windows.Forms.Button buttonRead;
     }
 }
 
