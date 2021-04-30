@@ -45,7 +45,8 @@ namespace Encrypt_Decrypt
                 Output_textBox.Text = string.Empty;
                 if (Input_textBox.Text != string.Empty)
                 {
-                    List<char> charList = Input_textBox.Text.ToCharArray().ToList();
+                    string inputReverse = new string(Input_textBox.Text.Reverse().ToArray());
+                    List<char> charList = inputReverse.ToCharArray().ToList();
                     if (comboBox.SelectedIndex == 0)
                     {
                         charList.ForEach(c => { Output_textBox.Text += Encrypt(c); });
